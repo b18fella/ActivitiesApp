@@ -1,5 +1,6 @@
 package com.example.brom.activitiesapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
+
     private String[] mountainNames = {"Matterhorn","Mont Blanc","Denali"};
     private String[] mountainLocations = {"Alps","Alps","Alaska"};
     private int[] mountainHeights ={4478,4808,6190};
@@ -59,10 +61,17 @@ public class MainActivity extends AppCompatActivity {
 
         my_listview.setAdapter(adapter);
 
+        final
+
         my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-
+                Intent mountainDetailsIntent = new Intent(this, MountainDetailsActivity.class);
+                String message = mountainArrayList.get(i).info();
+                startActivity(mountainDetailsIntent);
             }
         });
     }
