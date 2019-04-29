@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         //    * Mountain Name
         //    * Mountain Location
         //    * Mountain Height
-        //Tjoo bre!
         // 6. When tapping on a list item: create an Intent that includes
         //    * Mountain Name
         //    * Mountain Location
