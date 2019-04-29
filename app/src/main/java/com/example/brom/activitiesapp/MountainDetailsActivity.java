@@ -19,9 +19,9 @@ public class MountainDetailsActivity extends AppCompatActivity {
 
         Intent mountainDetailsIntent = getIntent();
 
-        String message = mountainDetailsIntent.getStringExtra(MainActivity.message);
+        //String message = mountainDetailsIntent.getStringExtra(MainActivity.message);
 
-        TextView textView = findViewById(R.id.text_message);
+        //TextView textView = findViewById(R.id.text_message);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

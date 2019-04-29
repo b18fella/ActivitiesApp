@@ -61,16 +61,14 @@ public class MainActivity extends AppCompatActivity {
 
         my_listview.setAdapter(adapter);
 
-        final
-
         my_listview.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
 
 
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-                Intent mountainDetailsIntent = new Intent(this, MountainDetailsActivity.class);
-                String message = mountainArrayList.get(i).info();
+            public void onItemClick(AdapterView<?> parent, View view, int index, long id) {
+                Intent mountainDetailsIntent = new Intent(getApplicationContext(), MountainDetailsActivity.class);
+                String message = mountainArrayList.get(index).info();
                 startActivity(mountainDetailsIntent);
             }
         });
