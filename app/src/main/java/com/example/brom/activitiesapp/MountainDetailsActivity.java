@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class MountainDetailsActivity extends AppCompatActivity {
 
@@ -19,9 +20,11 @@ public class MountainDetailsActivity extends AppCompatActivity {
 
         Intent mountainDetailsIntent = getIntent();
 
-        //String message = mountainDetailsIntent.getStringExtra(MainActivity.message);
+        String message = mountainDetailsIntent.getStringExtra(MainActivity.X_MESSAGE);
 
-        //TextView textView = findViewById(R.id.text_message);
+        TextView textView = findViewById(R.id.TextFromMain);
+
+        textView.setText(message);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

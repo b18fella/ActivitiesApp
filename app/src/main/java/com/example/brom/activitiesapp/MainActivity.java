@@ -15,6 +15,8 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String X_MESSAGE = "com.example.android.twoactivities.extra.MESSAGE";
+
     private String[] mountainNames = {"Matterhorn","Mont Blanc","Denali"};
     private String[] mountainLocations = {"Alps","Alps","Alaska"};
     private int[] mountainHeights ={4478,4808,6190};
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         listData = new ArrayList<>(Arrays.asList(mountainNames));
 
@@ -69,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int index, long id) {
                 Intent mountainDetailsIntent = new Intent(getApplicationContext(), MountainDetailsActivity.class);
                 String message = mountainArrayList.get(index).info();
+                mountainDetailsIntent.putExtra(X_MESSAGE, message);
                 startActivity(mountainDetailsIntent);
             }
         });
